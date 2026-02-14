@@ -187,14 +187,13 @@ else:
 
     # --- レイアウト調整 ---
     fig.update_layout(
-        title=dict(text=f"{info['name']} ({ticker})", x=0.5, xanchor='center'),
         xaxis_rangeslider_visible=False,
         template="plotly_dark",
         height=700,
         margin=dict(l=50, r=50, b=50, t=50),
         hovermode="x unified",
-        legend=dict(x=1.01, y=0.99, xanchor='left', yanchor='top'),
-        legend2=dict(x=1.01, y=0.25, xanchor='left', yanchor='top')
+        legend=dict(orientation="h", x=1, y=1.01, xanchor='right', yanchor='bottom'),
+        legend2=dict(orientation="h", x=1, y=0.31, xanchor='right', yanchor='bottom')
     )
     
     fig.update_yaxes(title_text=f"Price ({info['currency']})", row=1, col=1)
